@@ -96,13 +96,13 @@
     cursor: pointer;
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
     #calculator {
         background-color: #262626;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 10px 10px 10px rgba(0,0,0,0.323);
-        display: block;
+        display: flex;
     }
 
     #calculator h2 {
