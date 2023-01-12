@@ -97,6 +97,16 @@
 }
 
 @media only screen and (max-width: 600px) {
+    #container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--linear-gradient);
+        color: #d1d5db;
+    }
+
     #calculator {
         background-color: #262626;
         padding: 20px;
