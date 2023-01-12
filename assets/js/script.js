@@ -8,7 +8,11 @@ function calcCompoundInterest() {
   const time = document.getElementById("time").value;
 
   let total = value * (1 + fee) ** time;
-  total = total.toFixed(2).replace(".", ",");
 
-  document.getElementById("total").innerHTML = `R$ ${total}`;
+  total = total.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+  });
+
+  document.getElementById("total").innerHTML = total;
 }
