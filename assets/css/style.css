@@ -97,13 +97,27 @@
 }
 
 @media only screen and (max-width: 600px) {
-    #container {
-        width: 90%;
-        height: 500px;
+    #calculator {
+        background-color: #262626;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.323);
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    #calculator h2 {
+        font-size: 18px;
+        position: relative;
+    }
+
+    #calculator h2::before{
+        position: absolute;
+        content: '';
+        height: 3px;
+        width: 150px;
         background: var(--linear-gradient);
-        color: #d1d5db;
+        bottom: 1px;
     }
   }
