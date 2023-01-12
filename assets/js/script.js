@@ -7,8 +7,8 @@ function calcCompoundInterest() {
   const fee = document.getElementById("fee").value / 100;
   const time = document.getElementById("time").value;
 
-  const total = value * (1 + fee) ** time;
+  let total = value * (1 + fee) ** time;
+  total = total.toFixed(2).replace(".", ",");
 
-  document.getElementById("total").innerHTML =
-    "R$ " + total.toFixed(2).replace(".", ",");
+  document.getElementById("total").innerHTML = `R$ ${total}`;
 }
