@@ -20,10 +20,10 @@ function formatNumber(num) {
       currency: "BRL"
     });
 
-  const units = ["M", "B", "T"];
+  const units = ["M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "De"];
   let i = -1;
-  while (num >= 1000000) {
-    num /= 1000000;
+  while (num >= 1000000000000) {
+    num /= 1000000000000;
     i++;
   }
 
