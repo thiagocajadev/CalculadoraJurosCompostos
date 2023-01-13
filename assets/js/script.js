@@ -14,6 +14,9 @@ for (let i = 0; i < inputs.length; i++) {
 function formatNumber(num) {
   if (!isFinite(num)) return "&infin;";
 
+  // converte possivel notação científica
+  num = parseFloat(num);
+
   const numberFormat = (num) =>
     num.toLocaleString("pt-BR", {
       style: "currency",
@@ -49,10 +52,8 @@ function calcCompoundInterest() {
 
   let total = value;
   for (let i = 1; i <= time; i++) {
-    // Aplica a taxa de juros ao total
-    total *= 1 + fee;
-    // Adiciona a contribuição mensal ao total
-    total += contribution;
+    total = total * (1 + fee);
+    total = total + contribution;
   }
 
   total = formatNumber(total);

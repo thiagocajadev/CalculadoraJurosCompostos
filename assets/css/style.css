@@ -24,12 +24,12 @@
 
 #calculator {
   background-color: #262626;
-  padding: 40px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.323);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 
 #calculator h2 {
@@ -49,7 +49,7 @@
 #input_box {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
 .input-field {
@@ -70,7 +70,19 @@
   border-bottom: 1px solid #4c1d95;
   color: #fff;
   font-size: 20px;
-  padding: 5px;
+  padding: 2px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .input-field input:focus {
