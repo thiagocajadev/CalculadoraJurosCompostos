@@ -14,26 +14,25 @@ for (let i = 0; i < inputs.length; i++) {
 function formatNumber(num) {
   if (!isFinite(num)) return "&infin;";
 
-  if (num < 1000000)
-    return num.toLocaleString("pt-BR", {
+  const numberFormat = (num) =>
+    num.toLocaleString("pt-BR", {
       style: "currency",
-      currency: "BRL"
+      currency: "BRL",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
     });
+
+  if (num < 1000000) return numberFormat(num);
 
   const units = ["M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "De"];
   let i = -1;
-  while (num >= 1000000000000) {
-    num /= 1000000000000;
+  while (num >= 1000000) {
+    num /= 1000000;
     i++;
   }
 
   const unit = units[i] || "";
-  return (
-    num.toLocaleString("pt-BR", {
-      style: "currency",
-      currency: "BRL"
-    }) + unit
-  );
+  return numberFormat(num) + unit;
 }
 
 function calcCompoundInterest() {
