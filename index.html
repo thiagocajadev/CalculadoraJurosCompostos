@@ -17,17 +17,32 @@
         <div id="input_box">
           <div class="input-field">
             <label for="value">Valor Inicial (capital):</label>
-            <input type="number" id="value" />
+            <input
+              class="validateNumber"
+              type="number"
+              step="0.01"
+              id="value"
+            />
+          </div>
+
+          <div class="input-field">
+            <label for="value">Aporte mensal:</label>
+            <input
+              class="validateNumber"
+              type="number"
+              step="0.01"
+              id="contribution"
+            />
           </div>
 
           <div class="input-field">
             <label for="fee">Taxa de Juros (a.m.):</label>
-            <input type="number" id="fee" />
+            <input class="validateNumber" type="number" step="0.01" id="fee" />
           </div>
 
           <div class="input-field">
-            <label for="time">Tempo de Rendimento (a.m.):</label>
-            <input type="number" id="time" />
+            <label for="time">Tempo de Rendimento (meses):</label>
+            <input class="validateNumber" type="number" step="0.01" id="time" />
           </div>
         </div>
 

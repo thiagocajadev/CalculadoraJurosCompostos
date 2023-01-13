@@ -29,7 +29,7 @@
     box-shadow: 10px 10px 10px rgba(0,0,0,0.323);
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
 }
 
 #calculator h2 {
