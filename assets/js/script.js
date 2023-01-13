@@ -12,22 +12,28 @@ for (let i = 0; i < inputs.length; i++) {
 }
 
 function formatNumber(num) {
-  if (!isFinite(num)) {
-    return "&infin;";
+  if (!isFinite(num)) return "&infin;";
+
+  if (num < 1000000)
+    return num.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL"
+    });
+
+  const units = ["M", "B", "T"];
+  let i = -1;
+  while (num >= 1000000) {
+    num /= 1000000;
+    i++;
   }
-  if (num >= 1000000000000) {
-    return (num / 1000000000000).toFixed(1) + "T";
-  }
-  if (num >= 1000000000) {
-    return (num / 1000000000).toFixed(1) + "B";
-  }
-  if (num >= 1000000) {
-    return (num / 1000000).toFixed(1) + "M";
-  }
-  return num.toLocaleString("pt-BR", {
-    style: "currency",
-    currency: "BRL"
-  });
+
+  const unit = units[i] || "";
+  return (
+    num.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL"
+    }) + unit
+  );
 }
 
 function calcCompoundInterest() {
