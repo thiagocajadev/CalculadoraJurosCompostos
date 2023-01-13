@@ -98,7 +98,7 @@
 
 @media only screen and (max-width: 600px) {
     #container {
-        padding-top: 25px;
+        padding: 25px 25px 25px 25px;
         align-items: flex-start;
         justify-content: center;
         background: var(--linear-gradient);
@@ -107,7 +107,7 @@
 
     #calculator {
         background-color: #262626;
-        padding: 20px;
+        padding: 25px 25px 25px 25px;;
         border-radius: 8px;
         box-shadow: 10px 10px 10px rgba(0,0,0,0.323);
         display: flex;
