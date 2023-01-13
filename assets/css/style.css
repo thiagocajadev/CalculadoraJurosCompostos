@@ -1,129 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
 
 :root {
-    /* --linear-gradient: linear-gradient(90deg, #38bdf8, #6d28d9, #4c1d95); */
-    --linear-gradient: linear-gradient(90deg, #4DC9E6, #376BCA, #210CAE);
+  /* --linear-gradient: linear-gradient(90deg, #38bdf8, #6d28d9, #4c1d95); */
+  --linear-gradient: linear-gradient(90deg, #4dc9e6, #376bca, #210cae);
 }
 
 * {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--linear-gradient);
-    color: #d1d5db;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--linear-gradient);
+  color: #d1d5db;
 }
 
 #calculator {
-    background-color: #262626;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.323);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  background-color: #262626;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.323);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #calculator h2 {
-    font-size: 30px;
-    position: relative;
+  font-size: 30px;
+  position: relative;
 }
 
-#calculator h2::before{
-    position: absolute;
-    content: '';
-    height: 3px;
-    width: 150px;
-    background: var(--linear-gradient);
-    bottom: 5px;
+#calculator h2::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 150px;
+  background: var(--linear-gradient);
+  bottom: 5px;
 }
 
 #input_box {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .input-field {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .input-field label {
-    font-size: 15px;
-    color: #c8ced6;
-    font-weight: 500;
+  font-size: 15px;
+  color: #c8ced6;
+  font-weight: 500;
 }
 
 .input-field input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #4c1d95;
-    color: #fff;
-    font-size: 20px;
-    padding: 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #4c1d95;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px;
 }
 
 .input-field input:focus {
-    outline: none;
+  outline: none;
 }
 
 #result {
-    text-align: center;
+  text-align: center;
 }
 
 #total {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 #calculate {
-    background: var(--linear-gradient);
-    border: none;
-    padding: 10px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
+  background: var(--linear-gradient);
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
-    #container {
-        padding: 25px 25px 25px 25px;
-        align-items: flex-start;
-        justify-content: center;
-        background: var(--linear-gradient);
-        color: #d1d5db;
-      }
-
-    #calculator {
-        background-color: #262626;
-        padding: 25px 25px 25px 25px;;
-        border-radius: 8px;
-        box-shadow: 10px 10px 10px rgba(0,0,0,0.323);
-        display: flex;
-    }
-
-    #calculator h2 {
-        font-size: 18px;
-        position: relative;
-    }
-
-    #calculator h2::before{
-        position: absolute;
-        content: '';
-        height: 3px;
-        width: 150px;
-        background: var(--linear-gradient);
-        bottom: 1px;
-    }
+@media only screen and (max-width: 425px) {
+  #calculator {
+    width: 360px;
+    margin-top: -180px;
+    background-color: #262626;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.323);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
+
+  #calculator h2 {
+    font-size: 16px;
+    position: relative;
+  }
+
+  #calculator h2::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 150px;
+    background: var(--linear-gradient);
+    bottom: 1px;
+  }
+
+  #total {
+    font-size: 32px;
+  }
+}
