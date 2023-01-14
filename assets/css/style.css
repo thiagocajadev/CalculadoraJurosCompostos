@@ -13,7 +13,6 @@
 }
 
 #container {
-  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -29,7 +28,7 @@
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.323);
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
 #calculator h2 {
