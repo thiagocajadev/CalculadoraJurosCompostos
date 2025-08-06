@@ -1,3 +1,3 @@
 # CalculadoraJurosCompostos
 
-[Link do App](https://thiagokj.github.io/CalculadoraJurosCompostos/) 
+[Link do App](https://thiagocajadev.github.io/CalculadoraJurosCompostos/) 
